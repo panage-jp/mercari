@@ -11,6 +11,7 @@
 - has_one :privateImformation
 - has_many :products
 - has_one :credit
+- has_one :sns_credential
 
 ## products テーブル
 
@@ -66,6 +67,17 @@
 ### Asociation
 
 - belogs_to :user
+
+## sns_credential テーブル
+
+| Column   | Type    | Options     |
+| -------- | ------- | ----------- |
+| provider | integer | null: false |
+| uid      | string  | null: false |
+| token    | string  | null: false |
+| user_id  | integer | null: flse  |
+
+- belongs_to :user
 
 ## brands テーブル
 
