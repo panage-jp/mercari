@@ -10,6 +10,7 @@
 
 - has_one :privateImformation
 - has_many :products
+- has_one :credit
 
 ## products テーブル
 
@@ -33,20 +34,30 @@
 
 ## privateImformations テーブル
 
-| Column          | Type    | Options                        |
-| --------------- | ------- | ------------------------------ |
-| user_id         | integer | null: false, foreign_key: true |
-| first_name      | string  | null: false                    |
-| last_name       | string  | null: false                    |
-| postalcode      | string  | null: false                    |
-| address         | text    | null: false                    |
-| phone_number    | string  | null: false                    |
-| birthday        | string  | null: false                    |
-| creditcard_code | string  |                                |
+| Column       | Type    | Options                        |
+| ------------ | ------- | ------------------------------ |
+| user_id      | integer | null: false, foreign_key: true |
+| first_name   | string  | null: false                    |
+| last_name    | string  | null: false                    |
+| postalcode   | string  | null: false                    |
+| address      | text    | null: false                    |
+| phone_number | string  | null: false                    |
+| birthday     | string  | null: false                    |
 
 ### Association
 
 - belongs_to :user
+
+## credit テーブル
+
+| Column      | Type    | Options                        |
+| ----------- | ------- | ------------------------------ |
+| user_id     | integer | null: false, foreign_key: true |
+| credit_code | string  | null: false                    |
+
+### Asociation
+
+- belogs_to :user
 
 ## brands テーブル
 
