@@ -21,7 +21,6 @@
 | name     | string  | null: false                    |
 | price    | integer | null: false                    |
 | status   | integer | null: false                    |
-| image    | string  |                                |
 | message  | text    |                                |
 | buyer_id | integer | foreign_key: true              |
 
@@ -32,6 +31,18 @@
 - has_many :categories, through: :product_categories
 - has_many :brands, through: :product_brands
 - belongs_to :user
+- has_many :images
+
+## image テーブル
+
+| Column     | Type    | Options                        |
+| ---------- | ------- | ------------------------------ |
+| product_id | integer | null: false, foreign_key: true |
+| image      | string  | null: false                    |
+
+### Association
+
+- belongs_to :product
 
 ## profile テーブル
 
@@ -59,10 +70,10 @@
 
 ## credit テーブル
 
-| Column      | Type    | Options                        |
-| ----------- | ------- | ------------------------------ |
-| user_id     | integer | null: false, foreign_key: true |
-| credit_code | string  | null: false                    |
+| Column         | Type    | Options                        |
+| -------------- | ------- | ------------------------------ |
+| user_id        | integer | null: false, foreign_key: true |
+| costomer_token | string  | null: false                    |
 
 ### Asociation
 
