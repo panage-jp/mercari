@@ -12,6 +12,7 @@
 - has_many :products
 - has_one :credit
 - has_one :sns_credential
+- has_many :markets
 
 ## products テーブル
 
@@ -25,7 +26,6 @@
 | delivery_fee_payer | integer | null: false                    |
 | delivery_agency    | integer | null: false                    |
 | delivery_day       | integer | null: false                    |
-| buyer_id           | integer | foreign_key: true              |
 
 ### Association
 
@@ -35,8 +35,9 @@
 - has_many :brands, through: :product_brands
 - belongs_to :user
 - has_many :images
+- has_one :market
 
-## image テーブル
+## images テーブル
 
 | Column     | Type    | Options                        |
 | ---------- | ------- | ------------------------------ |
@@ -47,7 +48,7 @@
 
 - belongs_to :product
 
-## profile テーブル
+## profiles テーブル
 
 | Column          | Type    | Options                        |
 | --------------- | ------- | ------------------------------ |
@@ -71,7 +72,7 @@
 
 - belongs_to :user
 
-## credit テーブル
+## credits テーブル
 
 | Column         | Type    | Options                        |
 | -------------- | ------- | ------------------------------ |
@@ -82,7 +83,7 @@
 
 - belogs_to :user
 
-## sns_credential テーブル
+## sns_credentials テーブル
 
 | Column   | Type    | Options     |
 | -------- | ------- | ----------- |
@@ -139,3 +140,16 @@
 
 - belongs_to :product
 - belongs_to :category
+
+## markets テーブル
+
+| Column     | Type    | Options                        |
+| ---------- | ------- | ------------------------------ |
+| product_id | integer | null: false, foreign_key: true |
+| user_id    | integer | null: false, foreign_key: true |
+| phase      | integer | default: 0                     |
+
+### Association
+
+- belongs_to :product
+- belongs_to :user
