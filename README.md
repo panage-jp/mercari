@@ -80,9 +80,10 @@
 
 ## categories テーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| ancestry | string |             |
 
 ### Association
 
