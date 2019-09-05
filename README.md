@@ -36,6 +36,7 @@
 | user_id      | integer | null: false, foreign_key: true |
 | first_name   | string  | null: false                    |
 | last_name    | string  | null: false                    |
+| postalcode   | string  | null: false                    |
 | address      | text    | null: false                    |
 | phone_number | string  | null: false                    |
 | birthday     | string  | null: false                    |
