@@ -15,14 +15,17 @@
 
 ## products テーブル
 
-| Column   | Type    | Options                        |
-| -------- | ------- | ------------------------------ |
-| user_id  | integer | null: false, foreign_key: true |
-| name     | string  | null: false                    |
-| price    | integer | null: false                    |
-| status   | integer | null: false                    |
-| message  | text    |                                |
-| buyer_id | integer | foreign_key: true              |
+| Column             | Type    | Options                        |
+| ------------------ | ------- | ------------------------------ |
+| user_id            | integer | null: false, foreign_key: true |
+| name               | string  | null: false                    |
+| price              | integer | null: false                    |
+| status             | integer | null: false                    |
+| message            | text    |                                |
+| delivery_fee_payer | integer | null: false                    |
+| delivery_agency    | integer | null: false                    |
+| delivery_day       | integer | null: false                    |
+| buyer_id           | integer | foreign_key: true              |
 
 ### Association
 
