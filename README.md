@@ -14,15 +14,15 @@
 
 ## products テーブル
 
-| Column       | Type    | Options                        |
-| ------------ | ------- | ------------------------------ |
-| user_id      | integer | null: false, foreign_key: true |
-| product_name | string  | null: false                    |
-| price        | integer | null: false                    |
-| status       | integer | null: false                    |
-| image        | string  |                                |
-| message      | text    |                                |
-| buyer_id     | integer | foreign_key: true              |
+| Column   | Type    | Options                        |
+| -------- | ------- | ------------------------------ |
+| user_id  | integer | null: false, foreign_key: true |
+| name     | string  | null: false                    |
+| price    | integer | null: false                    |
+| status   | integer | null: false                    |
+| image    | string  |                                |
+| message  | text    |                                |
+| buyer_id | integer | foreign_key: true              |
 
 ### Association
 
@@ -61,9 +61,9 @@
 
 ## brands テーブル
 
-| Column     | Type   | Options     |
-| ---------- | ------ | ----------- |
-| brand_name | string | null: false |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ### Association
 
@@ -72,9 +72,9 @@
 
 ## categories テーブル
 
-| Column        | Type   | Options     |
-| ------------- | ------ | ----------- |
-| category_name | string | null: false |
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
 ### Association
 
