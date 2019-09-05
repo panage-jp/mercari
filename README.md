@@ -32,17 +32,25 @@
 - has_many :brands, through: :product_brands
 - belongs_to :user
 
-## privateImformations テーブル
+## profile テーブル
 
-| Column       | Type    | Options                        |
-| ------------ | ------- | ------------------------------ |
-| user_id      | integer | null: false, foreign_key: true |
-| first_name   | string  | null: false                    |
-| last_name    | string  | null: false                    |
-| postalcode   | string  | null: false                    |
-| address      | text    | null: false                    |
-| phone_number | string  | null: false                    |
-| birthday     | string  | null: false                    |
+| Column          | Type    | Options                        |
+| --------------- | ------- | ------------------------------ |
+| user_id         | integer | null: false, foreign_key: true |
+| first_name      | string  | null: false                    |
+| last_name       | string  | null: false                    |
+| first_name_kana | string  | null: false                    |
+| last_name_kana  | string  | null: false                    |
+| postal_code     | integer | null: false                    |
+| prefecture      | integer | null: false                    |
+| city            | string  | null: false                    |
+| address_number  | string  | null: false                    |
+| building        | string  |                                |
+| introduction    | string  |                                |
+| avatar          | string  |                                |
+| gender          | integer | null: false                    |
+| phone_number    | string  | null: false                    |
+| birthday        | string  | null: false                    |
 
 ### Association
 
