@@ -499,3 +499,11 @@ body {
   background: #212121;
   border: none;
 }
+
+.movie{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 40px 0;
+}
