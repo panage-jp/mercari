@@ -73,7 +73,7 @@
 | product_id | integer | null: false, foreign_key: true |
 | brand_id   | integer | null: false, foreign_key: true |
 
-## #Association
+### Association
 
 - belongs_to :product
 - belongs_to :brand
