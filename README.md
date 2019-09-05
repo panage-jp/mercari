@@ -20,6 +20,7 @@
 | price        | integer | null: false                    |
 | status       | integer | null: false                    |
 | image        | string  |                                |
+| message      | text    |                                |
 
 ### Association
 
