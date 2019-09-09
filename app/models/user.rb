@@ -2,11 +2,11 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: %i[facebook google_oauth2]
+         :recoverable, :rememberable, :validatable, :trackable,:omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
   has_many :sns_credentials
   def self.from_omniauth(auth)
+    
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
     # sns認証したことがあればアソシエーションで取得
     # 無ければemailでユーザー検索して取得orビルド(保存はしない)
@@ -19,6 +19,6 @@ class User < ApplicationRecord
       sns.user = user
       sns.save
     end
-    user
+    { user: user, sns: sns}
   end
 end
