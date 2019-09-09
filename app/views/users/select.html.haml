@@ -1,0 +1,16 @@
+.devise
+  = render "devise/shared/header"
+  .deviseSection
+    .inner.inner--narrow
+      .title.title--narrow
+        %h2.newTitle 新規会員登録
+        = link_to"メールアドレスで登録する", new_user_registration_path, users_select, class: "deviseBtn--red"
+        = link_to"facebookアカウントで登録する", user_facebook_omniauth_authorize_path, class: "deviseBtn--facebook", method: :post
+        = link_to"googleアカウントで登録する", user_google_oauth2_omniauth_authorize_path, class: "deviseBtn--blue", method: :post
+      .deviseForm.deviseForm--none
+
+
+
+
+
+  =render "devise/shared/footer"

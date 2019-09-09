@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   omniauth_callbacks: 'users/omniauth_callbacks',
   registrations: 'users/registrations'
 }
-  
+
+  devise_scope :user do
+    get 'users/select', :to => 'users/registrations#select'
+  end
   
   resources :users, only: [:show] do
     member do
