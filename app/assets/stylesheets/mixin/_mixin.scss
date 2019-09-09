@@ -15,10 +15,12 @@
   .mypageTabs {
     height: 74px;
     @include clearfix();
+
     li {
       width: 50%;
       float: left;
       text-align: center;
+
       a {
         display: block;
         font-size: 16px;
@@ -30,21 +32,25 @@
       }
     }
   }
+
   .tabContent {
     ul {
       li {
         border-bottom: 1px solid #eee;
         min-height: 40px;
         padding: 16px;
+
         &:last-child {
           text-align: center;
         }
+
         .mypageBtn {
           display: block;
           line-height: 56px;
           background-color: #eee;
           color: $hexGray20;
           text-decoration: none;
+
           &:hover {
             opacity: 0.5;
           }
@@ -93,6 +99,7 @@
     overflow: hidden;
     margin: 0;
     z-index: auto;
+
     img {
       position: absolute;
       top: 0;
@@ -103,12 +110,14 @@
       z-index: auto;
     }
   }
+
   .productList--body {
     background-color: white;
     height: 78px;
     color: $hexGray20;
     padding: 16px;
     width: 188px;
+
     .name {
       overflow: hidden;
       height: 3em;
@@ -116,17 +125,22 @@
       font-size: 16px;
       text-align: left;
     }
+
     .details {
       font-size: 16px;
+
       ul {
         @include clearfix();
+
         li {
           float: left;
+
           &:last-child {
             float: right;
           }
         }
       }
+
       p {
         font-size: 10px;
         text-align: left;
@@ -148,6 +162,7 @@
   margin: 5px;
   color: $hexGray20;
   text-decoration: none;
+
   &:hover {
     color: $white;
     background-color: $red;

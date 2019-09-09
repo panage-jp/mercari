@@ -123,34 +123,52 @@
           %br
           かりません
   %section.pickupContainer
-    %h2.head ピックアップカテゴリー
+    %h2.head ピックアップブランド
     .productBox
       .productHead
-        = link_to "#" do
-          %h3.title 新規投稿商品
-      .productLists{id: "slickLists--0"}
-        = render []
+        = link_to "" do
+          %h3.title "ブランド名"
+      .productLists
+        = render "products"
+        = render "products"
+        = render "products"
+        = render "products"
+        = render "products"
+        = render "products"
+        = render "products"
+        = render "products"
+
   %section.pickupContainer
     %h2.head ピックアップブランド
     .productBox
       .productHead
         = link_to "" do
           %h3.title "ブランド名"
-      .productLists{id: "slickLists--1"}
-        .productList
-          = link_to "" do
-            .soldout--small
-            .soldoutText--small 売り切れ
-            %figure.productList--img
-              -# = image_tag"#{product.captured_images.first.content}"
-            .productList--body
-              %h3.name 名前
-              .details
-                %ul
-                  %li 5000円
-                  %li
-                    = fa_icon "heart", class: "likeIcon", text: "hoge"
-                %p (税込)
+      .productLists
+        = render "products"
+        = render "products"
+        = render "products"
+        = render "products"
 = render "shared/banner"
 = render "shared/footer"
 = render "shared/purchaseBtn"
+
+
+
+
+-# %h2.head ピックアップカテゴリー
+-# .productBox
+-#   .productHead
+-#     = link_to "" do
+-#       %h3.title 新規投稿商品
+-#   .productLists{id: "slickLists--0"}
+-#     = render "products"
+
+-# %h2.head ピックアップブランド
+-# .productBox
+-#   .productHead
+-#     = link_to "" do
+-#       %h3.title "ブランド名"
+-#   .productLists{id: "slickLists--1"}
+-#     .productList
+-#       = render "products"

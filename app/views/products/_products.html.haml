@@ -1,0 +1,14 @@
+.productList
+  = link_to "" do
+    .soldout--small
+    .soldoutText--small 売り切れ
+    %figure.productList--img
+      -# = image_tag"#{product.captured_images.first.content}"
+    .productList--body
+      %h3.name 名前
+      .details
+        %ul
+          %li 5000円
+          %li
+            = fa_icon "heart", class: "likeIcon", text: "hoge"
+        %p (税込)
