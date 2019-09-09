@@ -22,7 +22,7 @@
 | name               | string  | null: false                    |
 | price              | integer | null: false                    |
 | status             | integer | null: false                    |
-| message            | text    |                                |
+| detail             | text    |                                |
 | delivery_fee_payer | integer | null: false                    |
 | delivery_agency    | integer | null: false                    |
 | delivery_day       | integer | null: false                    |
